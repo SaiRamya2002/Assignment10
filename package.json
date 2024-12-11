@@ -1,38 +1,53 @@
 {
-  "name": "buyit-ecommerce",
-  "version": "1.0.0",
-  "description": "eCommerce web application built with MERN Stack.",
-  "type": "module",
-  "main": "server.js",
-  "scripts": {
-    "start": "NODE_ENV=production node backend/server.js",
-    "server": "nodemon backend/server.js",
-    "client": "npm start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "data:import": "node backend/seeder.js",
-    "data:destroy": "node backend/seeder.js -d",
-    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
-  },
-  "author": "S M Firdous Hassan",
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
+  "proxy": "https://buyit-ecommerce.onrender.com",
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "colors": "^1.4.0",
-    "compression": "^1.7.4",
-    "concurrently": "^9.1.0",
-    "cookie-parser": "^1.4.6",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.5",
-    "express": "^4.18.2",
-    "express-validator": "^7.0.1",
-    "jsonwebtoken": "^9.0.2",
-    "mongoose": "^8.0.3",
-    "multer": "^1.4.5-lts.1",
-    "nodemailer": "^6.9.8",
-    "nodemon": "^3.1.7",
-    "razorpay": "^2.9.2",
-    "react-helmet": "^6.1.0"
+    "@reduxjs/toolkit": "^2.0.1",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.6.2",
+    "bootstrap": "^5.3.2",
+    "buyit-ecommerce": "file:..",
+    "react": "^18.2.0",
+    "react-bootstrap": "^2.9.1",
+    "react-dom": "^18.2.0",
+    "react-dotenv": "^0.1.3",
+    "react-helmet-async": "^2.0.4",
+    "react-icons": "^4.12.0",
+    "react-redux": "^9.0.4",
+    "react-router-bootstrap": "^0.26.2",
+    "react-router-dom": "^6.21.0",
+    "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.3",
+    "recharts": "^2.10.4",
+    "styled-components": "^6.1.13",
+    "web-vitals": "^2.1.4"
   },
-  "engines": {
-    "node": ">=16.0.0"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
